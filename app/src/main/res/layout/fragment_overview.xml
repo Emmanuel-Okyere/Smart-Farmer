@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#05af0b">
+   <EditText
+       android:id="@+id/searchCity"
+       android:layout_width="match_parent"
+       android:layout_height="40sp"
+       android:layout_centerHorizontal="true"
+       android:layout_marginLeft="20sp"
+       android:layout_marginRight="20sp"
+       android:layout_marginTop="5sp"
+       android:paddingStart="14sp"
+       android:drawableStart="@drawable/ic_baseline_location_searching_24"
+       android:background="@drawable/edittextdesign"
+
+       android:elevation="23sp"
+
+       android:gravity="center_vertical|center_horizontal"
+       android:hint="Search for Farm location"
+       android:imeOptions="actionGo"
+       android:inputType="textAutoCorrect"
+       android:textColor="#000000"
+       android:textColorHint="#C9454444"
+       android:textSize="20sp"
+       app:layout_constraintTop_toTopOf="parent"
+       tools:layout_editor_absoluteX="30dp"
+       android:drawableLeft="@drawable/ic_baseline_search_24"
+       android:paddingLeft="14sp">
+
+   </EditText>
+
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       android:id="@+id/weatherIcon"
+       android:src="@drawable/finding"
+       android:layout_marginTop="80dp">
+
+   </ImageView>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="50dp"
+       android:orientation="vertical"
+       android:layout_above="@id/cityFinder">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/temperature"
+          android:paddingStart="30dp"
+          android:textSize="50sp"
+          android:textStyle="bold"
+          android:textColor="#ffffff"
+          android:text="°C"
+          android:paddingLeft="30dp">
+
+      </TextView>
+
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/weatherCondition"
+          android:textSize="30sp"
+          android:textColor="#ffffff"
+          android:text="       "
+          android:paddingStart="30sp"
+          android:paddingLeft="30sp">
+
+      </TextView>
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cityName"
+          android:textStyle="bold"
+          android:textSize="40sp"
+          android:text="Loading..."
+          android:paddingStart="30sp"
+          android:textColor="#ffffff"
+          android:paddingLeft="30sp">
+
+      </TextView>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/irrigationCondition"
+          android:textStyle="bold"
+          android:textSize="20sp"
+          android:text=""
+          android:paddingStart="30sp"
+          android:textColor="#ffffff"
+          android:paddingLeft="30sp"
+          >
+      </TextView>
+      <ProgressBar
+          android:id="@+id/progressBar3"
+          style="?android:attr/progressBarStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:visibility="invisible"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/irrigationCondition"
+          app:layout_constraintVertical_bias="0.39" />
+
+   </LinearLayout>
+
+   <RelativeLayout
+
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:layout_centerInParent="true"
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:layout_alignParentBottom="true"
+       android:id="@+id/cityFinder"
+       android:background="@drawable/buttondesign"
+       android:layout_marginBottom="30dp">
+
+   </RelativeLayout>
+
+</RelativeLayout>
